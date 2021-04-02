@@ -1,0 +1,51 @@
+#:import utils kivy.utils
+
+<Label>
+    background_color: (10/255, 250/255, 189/255, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+
+<BackgroundColorChange>
+    # First method how to change background color, the second method in the associated python file
+    canvas.before:
+        Color:
+            rgba: (252/255, 186/255, 3/255, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    # ------------------------------------------------------------------------------------------- #
+
+    GridLayout:
+        size: root.width, root.height
+        cols: 1
+        rows: 2
+        padding: 50
+        spacing: 20
+
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Name"
+            TextInput:
+                id: name
+                multiline: False
+            Label:
+                text: "Surname"
+            TextInput:
+                id: surname
+                multiline: False
+            Label:
+                text: "Age"
+            TextInput:
+                id: age
+                multiline: False
+                background_normal: ""
+
+        Button:
+            text: "Clear"
+            on_press: root.clear_text()
