@@ -1,0 +1,35 @@
+#:import utils kivy.utils
+
+<MyGridLayout>
+    GridLayout:
+        size: root.width, root.height
+        cols: 1
+        rows: 2
+
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Name"
+            TextInput:
+                id: name
+                multiline: False
+                background_color: (24/255, 36/255, 189/255, 1) # change color with hex RGBA
+            Label:
+                text: "Surname"
+            TextInput:
+                id: surname
+                multiline: False
+                background_color: (24/255, 36/255, 189/255, 1) # change color with hex RGBA
+            Label:
+                text: "Age"
+            TextInput:
+                id: age
+                multiline: False
+                background_normal: ""
+                background_color: (24/255, 36/255, 189/255, 1) # change color with hex RGBA
+
+        Button:
+            text: "Clear"
+            background_normal: ""
+            background_color: utils.get_color_from_hex("#fa00df") # change color with hex value
+            on_press: root.clear_text()
