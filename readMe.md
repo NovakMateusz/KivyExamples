@@ -10,3 +10,4 @@
 | image_app.py | image.kv | Example how to set images in the App |
 | float_layout_app.py | float_layout.kv | Example how to use FloatLayout |
 | update_label_app.py | update_label.kv | Example how to change the value of the label on the button click |
+| calculator.py | calculator.kv | Small and simple calculator App|
