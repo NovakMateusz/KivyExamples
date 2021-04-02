@@ -1,0 +1,16 @@
+<MyUpdateLabel>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "Give me your name: "
+            id: name
+        TextInput:
+            id: user_input
+            multiline: False
+            size_hint: (1, 0.5)
+        Button:
+            text: 'Submit'
+            size_hint: (1, 0.5)
+            on_press: root.update_name_label()
