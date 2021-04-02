@@ -1,0 +1,33 @@
+#:import utils kivy.utils
+
+<MyBoxLayout>
+    BoxLayout:
+        size: root.width, root.height
+        orientation: "vertical" # or horizontal
+
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Name"
+        TextInput:
+            id: name
+            multiline: False
+        Label:
+            text: "Surname"
+        TextInput:
+            id: surname
+            multiline: False
+        Label:
+            text: "Age"
+        TextInput:
+            id: age
+            multiline: False
+        Button:
+            text: 'Clear'
+            on_press: root.clear_text()
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.5, 0.5)
+            # size_hint: (None, None) Need to be set if width and height are going to be hard coded
+            # width: 200
+            # height: 50
